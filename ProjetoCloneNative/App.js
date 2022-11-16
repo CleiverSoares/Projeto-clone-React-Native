@@ -1,4 +1,4 @@
-import { StyleSheet, View, StatusBar, Image, Text, TextInput, ScrollView } from "react-native";
+import { StyleSheet, View, StatusBar, Image, Text, TouchableOpacity, TextInput, ScrollView } from "react-native";
 import Menu from 'react-native-vector-icons/Feather'
 import Pesquisa from 'react-native-vector-icons/AntDesign'
 import Seta from 'react-native-vector-icons/AntDesign'
@@ -17,15 +17,19 @@ export default function App() {
 
         <View style={styles.navBar}>
           <View style={styles.nav}>
-            <Menu name="menu" style={{ marginLeft: 15, fontSize: 20, color: "#000" }} />
+            <TouchableOpacity>
+              <Menu name="menu" style={{ marginLeft: 15, fontSize: 20, color: "#000" }} />
+            </TouchableOpacity>
           </View>
           <View style={styles.nav1}>
             <Image source={Logo} style={{ width: 80, height: 50, alignItems: "center" }} />
           </View>
 
           <View style={styles.nav2}>
+          <TouchableOpacity style={{flexDirection:"row"}}>
             <Pesquisa style={{ marginRight: 25 }} name="search1" size={20} color="#000" />
             <Carro style={{ marginRight: 15 }} name="shoppingcart" size={20} color="#000" />
+            </TouchableOpacity>
           </View>
         </View>
         <Image source={carrocel} style={{ width: 414, height: 240 }} />
@@ -40,6 +44,7 @@ export default function App() {
               onPress={() => {
                 Linking.openURL('https://reactnative.dev');
               }}>
+
               Descubra o que podemos fazer pela sua empresa
             </Text>
           </Text>
@@ -47,29 +52,46 @@ export default function App() {
 
         <View style={styles.imput}>
           <TextInput placeholder="O que você quer aprender" />
-          <Pesquisa name="search1" style={styles.iconeFinal} />
+          <TouchableOpacity>
+            <Pesquisa name="search1" style={styles.iconeFinal} />
+          </TouchableOpacity>
         </View>
-
         <Text style={styles.textosPrincipais}>Uma ampla seleção de cursos</Text>
         <Text style={styles.textosSecundarios}>Escolha entre 204.000 cursos em vídeo online com novas adições publicadas mensalmente</Text>
 
         <View style={styles.formatacaoFinal}>
-          <Text style={styles.textoFinal}>Python</Text>
-          <Seta name="down" style={styles.iconeFinal} />
+          <TouchableOpacity>
+            <Text style={styles.textoFinal}>Python</Text>
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Seta name="down" style={styles.iconeFinal} />
+          </TouchableOpacity>
         </View>
         <View style={styles.formatacaoFinal}>
-          <Text style={styles.textoFinal}>Excel</Text>
-          <Seta name="down" style={styles.iconeFinal} />
+          <TouchableOpacity>
+            <Text style={styles.textoFinal}>Excel</Text>
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Seta name="down" style={styles.iconeFinal} />
+          </TouchableOpacity>
         </View>
         <View style={styles.formatacaoFinal}>
-          <Text style={styles.textoFinal}>Desenvolvimento Web</Text>
-          <Seta name="down" style={styles.iconeFinal} />
+          <TouchableOpacity>
+            <Text style={styles.textoFinal}>Desenvolvimento Web</Text>
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Seta name="down" style={styles.iconeFinal} />
+          </TouchableOpacity>
         </View>
         <View style={styles.formatacaoFinal}>
-          <Text style={styles.textoFinal}>JavaScript</Text>
-          <Seta name="down" style={styles.iconeFinal} />
+          <TouchableOpacity>
+            <Text style={styles.textoFinal}>JavaScript</Text>
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Seta name="down" style={styles.iconeFinal} />
+          </TouchableOpacity>
         </View>
-{/*         <View style={styles.formatacaoFinal}>
+        {/*         <View style={styles.formatacaoFinal}>
           <Text style={styles.textoFinal}>Data Science</Text>
           <Seta name="down" style={styles.iconeFinal} />
         </View>
